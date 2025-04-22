@@ -1,32 +1,51 @@
-
-import os
 import openai
 import streamlit as st
 
-client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+# Initialize client with proper error handling
+try:
+    client = openai.OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
+except KeyError:
+    st.error("🔑 OpenAI API key not found in secrets! Please configure it in Streamlit Cloud settings.")
+    st.stop()
+except Exception as e:
+    st.error(f"🚨 OpenAI initialization failed: {str(e)}")
+    st.stop()
 
 def run_gpt(prompt_config, user_input):
-    # Setup system instruction
-    messages = [{"role": "system", "content": prompt_config.get("instructions", "")}]
+    """Enhanced GPT function with better error handling"""
+    try:
+        # Setup system instruction
+        messages = [{"role": "system", "content": prompt_config.get("instructions", "")}]
 
-    # Add memory from prior interaction if available
-    history = st.session_state.get("gpt_memory", [])
-    messages.extend(history)
+        # Add memory from prior interaction if available
+        history = st.session_state.get("gpt_memory", [])
+        messages.extend(history)
 
-    # Append user input
-    messages.append({"role": "user", "content": user_input})
+        # Append user input
+        messages.append({"role": "user", "content": user_input})
 
-    # Run GPT call
-    response = client.chat.completions.create(
-        model="gpt-4",
-        messages=messages,
-        temperature=0.7
-    )
+        # Run GPT call with timeout
+        response = client.chat.completions.create(
+            model="gpt-4",
+            messages=messages,
+            temperature=0.7,
+            timeout=10  # seconds
+        )
 
-    result = response.choices[0].message.content
+        result = response.choices[0].message.content
 
-    # Save message history for chaining
-    messages.append({"role": "assistant", "content": result})
-    st.session_state["gpt_memory"] = messages[-6:]  # limit memory to last 3 exchanges
+        # Save message history for chaining
+        messages.append({"role": "assistant", "content": result})
+        st.session_state["gpt_memory"] = messages[-6:]  # limit memory
 
-    return result
+        return result
+        
+    except openai.APIConnectionError:
+        st.error("🌐 Connection error - please check your internet connection")
+        return None
+    except openai.RateLimitError:
+        st.error("🐇 API rate limit exceeded - please wait before trying again")
+        return None
+    except Exception as e:
+        st.error(f"⚠️ Unexpected error: {str(e)}")
+        return None
