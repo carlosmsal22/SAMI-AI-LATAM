@@ -1,51 +1,22 @@
+
+# utils/gpt_helpers.py
 import openai
-import streamlit as st
 
-# Initialize client with proper error handling
-try:
-    client = openai.OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
-except KeyError:
-    st.error("🔑 OpenAI API key not found in secrets! Please configure it in Streamlit Cloud settings.")
-    st.stop()
-except Exception as e:
-    st.error(f"🚨 OpenAI initialization failed: {str(e)}")
-    st.stop()
+# Make sure to set your OpenAI API key in the environment or use Streamlit secrets
+import os
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
-def run_gpt(prompt_config, user_input):
-    """Enhanced GPT function with better error handling"""
+def run_gpt_prompt(prompt: str, model="gpt-4", temperature=0.7, max_tokens=750):
     try:
-        # Setup system instruction
-        messages = [{"role": "system", "content": prompt_config.get("instructions", "")}]
-
-        # Add memory from prior interaction if available
-        history = st.session_state.get("gpt_memory", [])
-        messages.extend(history)
-
-        # Append user input
-        messages.append({"role": "user", "content": user_input})
-
-        # Run GPT call with timeout
-        response = client.chat.completions.create(
-            model="gpt-4",
-            messages=messages,
-            temperature=0.7,
-            timeout=10  # seconds
+        response = openai.ChatCompletion.create(
+            model=model,
+            messages=[
+                {"role": "system", "content": "You are a helpful market research assistant specializing in brand reputation analysis."},
+                {"role": "user", "content": prompt}
+            ],
+            temperature=temperature,
+            max_tokens=max_tokens
         )
-
-        result = response.choices[0].message.content
-
-        # Save message history for chaining
-        messages.append({"role": "assistant", "content": result})
-        st.session_state["gpt_memory"] = messages[-6:]  # limit memory
-
-        return result
-        
-    except openai.APIConnectionError:
-        st.error("🌐 Connection error - please check your internet connection")
-        return None
-    except openai.RateLimitError:
-        st.error("🐇 API rate limit exceeded - please wait before trying again")
-        return None
+        return response.choices[0].message["content"].strip()
     except Exception as e:
-        st.error(f"⚠️ Unexpected error: {str(e)}")
-        return None
+        return f"❌ GPT Error: {e}"
