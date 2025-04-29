@@ -64,3 +64,17 @@ def scrape_trustpilot(keyword, max_reviews=10):
         print(f"Using sample Trustpilot data due to: {e}")
         sample = [d for d in SAMPLE_DATA.get(keyword, []) if d['source'] == 'Trustpilot']
         return pd.DataFrame(sample[:max_reviews])
+def hybrid_scrape(keyword, max_results_per_source=5):
+    """
+    Combines Reddit and Trustpilot scraping into one DataFrame.
+    Falls back to SAMPLE_DATA if scraping fails.
+    """
+    print(f"Running hybrid scrape for: {keyword}")
+
+    reddit_data = scrape_reddit(keyword, max_posts=max_results_per_source)
+    trustpilot_data = scrape_trustpilot(keyword, max_reviews=max_results_per_source)
+
+    # Concatenate both sources
+    combined = pd.concat([reddit_data, trustpilot_data], ignore_index=True)
+
+    return combined
