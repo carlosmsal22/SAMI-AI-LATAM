@@ -1,78 +1,17 @@
 import streamlit as st
-from utils.sami_integration import SAMIAnalyzer
-from utils.web_scraper import hybrid_scrape  # From previous implementation
-import json
+import pandas as pd
+from utils.web_scraper import hybrid_scrape
 
-def display_sami_report(report: Dict):
-    """Render SAMI-style interactive report"""
-    st.header(f"🔮 {report['title']}")
-    st.caption(f"Generated at {report['timestamp']}")
-    
-    # Strategic Overview
-    with st.container(border=True):
-        st.subheader("🎯 Strategic Overview")
-        st.write(report['analysis']['overview'])
-        
-        cols = st.columns(3)
-        cols[0].metric("Positive", f"{report['analysis']['sentiment_breakdown']['positive']}%")
-        cols[1].metric("Negative", f"{report['analysis']['sentiment_breakdown']['negative']}%")
-        cols[2].metric("Neutral", f"{report['analysis']['sentiment_breakdown']['neutral']}%")
-    
-    # Emotional Analysis
-    st.subheader("🧠 Emotional Pulse")
-    emotions = pd.DataFrame(report['analysis']['emotional_analysis'])
-    st.bar_chart(emotions.set_index('emotion'))
-    
-    # Competitive Benchmark
-    with st.expander("🏆 Competitive Benchmarking"):
-        st.write(report['analysis']['competitive_benchmark'])
-    
-    # Recommendations
-    st.subheader("💡 Strategic Recommendations")
-    for rec in report['analysis']['strategic_recommendations']:
-        st.markdown(f"- {rec}")
+st.title("Enterprise Reputation Analyzer")
 
-def main():
-    st.set_page_config(layout="wide", page_title="SAMI Enterprise")
-    
-    # SAMI Configuration
-    analysis_types = [
-        "Sentiment and Emotion Analysis",
-        "Split Emotion Analysis",
-        "Brand Reputation Report",
-        "Custom Analysis"
-    ]
-    
-    # UI Layout
-    col1, col2 = st.columns([3, 1])
-    with col1:
-        company = st.text_input("Company Name", "Secureonix")
-    with col2:
-        analysis_type = st.selectbox("Report Type", analysis_types)
-    
-    if st.button("✨ Generate SAMI Report"):
-        with st.spinner("Conducting deep reputation analysis..."):
-            try:
-                # Step 1: Data Collection
-                data = hybrid_scrape(company)
-                
-                # Step 2: SAMI Analysis
-                analyzer = SAMIAnalyzer()
-                report = analyzer.generate_report(data, analysis_type)
-                
-                # Display results
-                st.session_state.sami_report = report
-                display_sami_report(report)
-                
-                # Export
-                st.download_button(
-                    "📥 Download Full Report",
-                    data=json.dumps(report, indent=2),
-                    file_name=f"SAMI_{company}_{datetime.now().strftime('%Y%m%d')}.json"
-                )
-                
-            except Exception as e:
-                st.error(f"SAMI Analysis failed: {str(e)}")
+company = st.text_input("Enter company name", "Secureonix")
+max_results = st.slider("Number of posts/reviews", 5, 50, 10)
 
-if __name__ == "__main__":
-    main()
+if st.button("Run Analysis") and company:
+    with st.spinner("Scraping data, please wait..."):
+        result_df = hybrid_scrape(company, max_results_per_source=max_results//4)
+        if not result_df.empty:
+            st.success(f"Found {len(result_df)} results for {company}! 🚀")
+            st.dataframe(result_df)
+        else:
+            st.error("No data found. Try a different company or check naming.")
