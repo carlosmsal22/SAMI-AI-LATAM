@@ -20,3 +20,5 @@ def run_gpt_prompt(prompt, model="gpt-3.5-turbo", temperature=0.7):
         return response.choices[0].message.content
     except Exception as e:
         return f"Analysis failed: {str(e)}"
+# Add this at the bottom of gpt_helpers.py
+run_gpt = run_gpt_prompt
