@@ -2,6 +2,7 @@ import openai
 import os
 from datetime import datetime
 import csv
+import run_gpt
 
 def run_gpt(prompt, model="gpt-3.5-turbo", temperature=0.7):
     """Handle GPT analysis with error handling"""
