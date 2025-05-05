@@ -3,12 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>SUITE DE SOLUCIONES SAMI AI</title>
-  <link rel="stylesheet" href="style.css">
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
+      margin: 0; padding: 0;
       background-color: #f9f9f9;
       color: #333;
     }
@@ -41,16 +39,12 @@
     tr:hover {
       background-color: #f1f9ff;
     }
-    td a.button-link {
-      background-color: #007acc;
-      color: white;
-      padding: 8px 14px;
+    a {
+      color: #0066cc;
       text-decoration: none;
-      border-radius: 4px;
-      display: inline-block;
     }
-    td a.button-link:hover {
-      background-color: #005b99;
+    a:hover {
+      text-decoration: underline;
     }
     footer {
       text-align: center;
@@ -69,16 +63,26 @@
       text-decoration: none;
       border-radius: 4px;
       display: inline-block;
-      margin-top: 10px;
     }
     .download-button:hover {
       background-color: #3e8e41;
     }
-    @media screen and (max-width: 768px) {
-      table {
-        display: block;
-        overflow-x: auto;
-      }
+    .lang-buttons {
+      text-align: center;
+      margin-top: 15px;
+    }
+    .lang-buttons button {
+      margin: 0 5px;
+      padding: 8px 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 4px;
+      background-color: #0a2540;
+      color: white;
+      cursor: pointer;
+    }
+    .lang-buttons button:hover {
+      background-color: #003366;
     }
   </style>
 </head>
@@ -87,9 +91,10 @@
     <img src="LOGO.png" alt="SAMI Market Insights Logo">
     <h1>SAMI AI Portfolio Dashboard</h1>
     <p>Explore nuestra suite de copilotos de IA diseñados para transformar decisiones estratégicas en LATAM.</p>
-    <!-- Language Selection Buttons -->
-    <button onclick="showTable('es')" class="btn-language">Español</button>
-    <button onclick="showTable('en')" class="btn-language">English</button>
+    <div class="lang-buttons">
+      <button onclick="showTable('es')">Español</button>
+      <button onclick="showTable('en')">English</button>
+    </div>
   </header>
 
   <main>
@@ -97,45 +102,25 @@
       <a href="SAMI_Portfolio_Resumen.pdf" class="download-button" target="_blank">📄 Descargar Resumen PDF</a>
     </div>
 
-    <!-- Spanish Table -->
-    <div id="tabla-es">
-      <table>
-        <thead>
-          <tr>
-            <th>Nombre del Módulo</th>
-            <th>Tagline</th>
-            <th>Uso Estratégico</th>
-            <th>Ir al GPT</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>SAMI.AI COLOMBIA</td><td>GPT especializado en análisis de mercado Colombiano.</td><td>Soporta análisis por estrato, scraping, emociones y matrices regionales.</td><td><a href="https://chatgpt.com/g/g-6803ba313cc88191b6a11e9cc37f0077-sami-ai-colombia" target="_blank">Acceder GPT</a></td></tr>
-          <tr><td>SAMI Brand & Reputation AI</td><td>Evalúa y protege cómo se percibe tu marca.</td><td>Análisis de sentimientos, cambio de marca, métricas de confianza</td><td><a href="https://chatgpt.com/g/g-6805827d9358819197f942fd43ffbd55-sami-brand-reputation-ai" target="_blank">Acceder GPT</a></td></tr>
-          <tr><td>SAMI Market Segmentation AI</td><td>Segmenta con inteligencia. Actúa estratégicamente.</td><td>Análisis de conglomerados, LCA, perfil B2B</td><td><a href="https://chatgpt.com/g/g-4yGbjzMlx-sami-segmentation" target="_blank">Acceder GPT</a></td></tr>
-          <!-- Add more rows as needed -->
-        </tbody>
-      </table>
-    </div>
+    <table id="tabla-es">
+      <thead>
+        <tr><th>Nombre del Módulo</th><th>Tagline</th><th>Uso Estratégico</th><th>Ir al GPT</th></tr>
+      </thead>
+      <tbody>
+        <!-- 16 filas en español -->
+        <!-- Reemplazar con contenido generado -->
+      </tbody>
+    </table>
 
-    <!-- English Table -->
-    <div id="tabla-en" style="display: none;">
-      <table>
-        <thead>
-          <tr>
-            <th>Module Name</th>
-            <th>Tagline</th>
-            <th>Strategic Use</th>
-            <th>Go to GPT</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>SAMI.AI COLOMBIA</td><td>GPT specialized in Colombian market analysis.</td><td>Supports analysis by strata, scraping, emotions, and regional matrices.</td><td><a href="https://chatgpt.com/g/g-6803ba313cc88191b6a11e9cc37f0077-sami-ai-colombia" target="_blank">Go to GPT</a></td></tr>
-          <tr><td>SAMI Brand & Reputation AI</td><td>Evaluates and protects how your brand is perceived.</td><td>Sentiment analysis, brand change, trust metrics</td><td><a href="https://chatgpt.com/g/g-6805827d9358819197f942fd43ffbd55-sami-brand-reputation-ai" target="_blank">Go to GPT</a></td></tr>
-          <tr><td>SAMI Market Segmentation AI</td><td>Segment intelligently. Act strategically.</td><td>Cluster analysis, LCA, B2B profiling</td><td><a href="https://chatgpt.com/g/g-4yGbjzMlx-sami-segmentation" target="_blank">Go to GPT</a></td></tr>
-          <!-- Add more rows as needed -->
-        </tbody>
-      </table>
-    </div>
+    <table id="tabla-en" style="display: none;">
+      <thead>
+        <tr><th>Module Name</th><th>Tagline</th><th>Strategic Use</th><th>Go to GPT</th></tr>
+      </thead>
+      <tbody>
+        <!-- 16 filas en inglés -->
+        <!-- Reemplazar con contenido generado -->
+      </tbody>
+    </table>
   </main>
 
   <footer>
@@ -143,14 +128,9 @@
   </footer>
 
   <script>
-    function showTable(language) {
-      if (language === 'es') {
-        document.getElementById('tabla-es').style.display = 'block';
-        document.getElementById('tabla-en').style.display = 'none';
-      } else if (language === 'en') {
-        document.getElementById('tabla-es').style.display = 'none';
-        document.getElementById('tabla-en').style.display = 'block';
-      }
+    function showTable(lang) {
+      document.getElementById('tabla-es').style.display = (lang === 'es') ? 'table' : 'none';
+      document.getElementById('tabla-en').style.display = (lang === 'en') ? 'table' : 'none';
     }
   </script>
 </body>
