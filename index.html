@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,68 +10,76 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #ffffff;
+      background-color: #f9f9f9;
       color: #333;
     }
-
     header {
       text-align: center;
-      padding: 30px 20px;
+      padding: 30px 10px 10px;
+      background-color: #0a2540;
+      color: white;
     }
-
     header img {
-      max-height: 120px;
-      margin-bottom: 20px;
+      max-height: 100px;
+      margin-bottom: 10px;
     }
-
-    h1 {
-      font-size: 28px;
-      margin: 10px 0;
-    }
-
-    p {
-      font-size: 18px;
-      color: #666;
-    }
-
     main {
-      padding: 30px 5%;
+      padding: 20px;
     }
-
     table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 15px;
+      margin-top: 20px;
     }
-
-    thead th {
-      background-color: #f2f2f2;
-      font-weight: bold;
-      padding: 12px;
-      border: 1px solid #ddd;
-      font-size: 16px;
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
     }
-
-    tbody td {
-      padding: 12px;
-      border: 1px solid #ddd;
+    th {
+      background-color: #e1ecf4;
     }
-
-    td a {
-      color: #0056b3;
+    tr:hover {
+      background-color: #f1f9ff;
+    }
+    td a.button-link {
+      background-color: #007acc;
+      color: white;
+      padding: 8px 14px;
       text-decoration: none;
+      border-radius: 4px;
+      display: inline-block;
     }
-
-    td a:hover {
-      text-decoration: underline;
+    td a.button-link:hover {
+      background-color: #005b99;
     }
-
     footer {
       text-align: center;
       padding: 20px;
-      background-color: #f7f7f7;
-      font-size: 14px;
-      color: #666;
+      background-color: #eee;
+      font-size: 0.9em;
+    }
+    .download-section {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .download-button {
+      background-color: #4caf50;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 4px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+    .download-button:hover {
+      background-color: #3e8e41;
+    }
+    @media screen and (max-width: 768px) {
+      table {
+        display: block;
+        overflow-x: auto;
+      }
     }
   </style>
 </head>
@@ -78,10 +87,13 @@
   <header>
     <img src="LOGO.png" alt="SAMI Market Insights Logo">
     <h1>SAMI AI Portfolio Dashboard</h1>
-    <p>Su conjunto completo de información, organizado por función, valor y caso de uso.</p>
+    <p>Explore nuestra suite de copilotos de IA diseñados para transformar decisiones estratégicas en LATAM.</p>
   </header>
 
   <main>
+    <div class="download-section">
+      <a href="SAMI_Portfolio_Resumen.pdf" class="download-button" target="_blank">📄 Descargar Resumen PDF</a>
+    </div>
     <table>
       <thead>
         <tr>
@@ -92,23 +104,23 @@
         </tr>
       </thead>
       <tbody>
-        <tr><td>SAMI.AI COLOMBIA</td><td>GPT especializado en análisis de mercado Colombiano.</td><td>Soporta análisis por estrato, scraping, emociones y matrices regionales.</td><td><a href="https://chatgpt.com/g/g-6803ba313cc88191b6a11e9cc37f0077-sami-ai-colombia" target="_blank">Abrir GPT</a></td></tr>
-        <tr><td>SAMI AI ADVANCED ANALYTICAL TOOL</td><td>Advanced AI-Powered Data Analysis Across Any Format.</td><td>Specialized tool for in-depth market research and data analysis.</td><td><a href="https://chatgpt.com/g/g-6803ba313cc88191b6a11e9cc37f0077-sami-ai-colombia" target="_blank">Abrir GPT</a></td></tr>
-        <tr><td>SAMI Brand & Reputation AI</td><td>Evalúa y protege cómo se percibe tu marca.</td><td>Análisis de sentimientos, cambio de marca, métricas de confianza</td><td><a href="https://chatgpt.com/g/g-6805827d9358819197f942fd43ffbd55-sami-brand-reputation-ai" target="_blank">Abrir GPT</a></td></tr>
-        <tr><td>SAMI Market Segmentation AI</td><td>Segmenta con inteligencia. Actúa estratégicamente.</td><td>Análisis de conglomerados, LCA, perfil B2B</td><td><a href="https://chatgpt.com/g/g-4yGbjzMlx-sami-segmentation" target="_blank">Abrir GPT</a></td></tr>
-        <tr><td>SAMI Concept Testing & Screening</td><td>Identifique las mejores ideas antes de construir.</td><td>Evaluación de conceptos, singularidad y atractivo</td><td><a href="https://chatgpt.com/g/g-680586a0d004819188ada75368d4779d-sami-concept-testing-screening" target="_blank">Abrir GPT</a></td></tr>
-        <tr><td>SAMI Customer Journey & Funnel AI</td><td>Descubra la fricción, los impulsores de fidelización y las señales de abandono.</td><td>Seguimiento de abandono, información de fidelización, desencadenantes de recompra</td><td><a href="https://chatgpt.com/g/g-68058999568081918d77595e64dc4820-sami-customer-journey-funnel-ai" target="_blank">Abrir GPT</a></td></tr>
-        <tr><td>SAMI Product AI</td><td>Planificación, fijación de precios y posicionamiento de productos más inteligentes.</td><td>Priorización de funciones, optimización de la cartera</td><td><a href="https://chatgpt.com/g/g-68058d8874b081919ebda4f20474656f-sami-product-ai" target="_blank">Abrir GPT</a></td></tr>
-        <tr><td>SAMI Go-to-Market AI</td><td>Mapee el rendimiento del producto y el impacto del marketing en el lanzamiento.</td><td>Seguimiento de lanzamientos, comentarios de uso, señales de fidelización</td><td><a href="https://chatgpt.com/g/g-68059111447481919df32b37bb6ecd73-sami-go-to-market-ai" target="_blank">Abrir GPT</a></td></tr>
-        <tr><td>SAMI Drivers AI</td><td>Descubra qué impulsa la elección, la lealtad y la compra.</td><td>Modelado de Kano, JTBD, desencadenantes de compra</td><td><a href="https://chatgpt.com/g/g-68059403147c8191830645a8e0db687b-sami-drivers-ai" target="_blank">Abrir GPT</a></td></tr>
-        <tr><td>SAMI Category & Target AI</td><td>Descubre quién es realmente tu audiencia.</td><td>Generación de personas, agrupación de estados de necesidad</td><td><a href="https://chatgpt.com/g/g-6805958782d481919d1bcc717d0c06e9-sami-category-target-ai" target="_blank">Abrir GPT</a></td></tr>
-        <tr><td>SAMI Portfolio AI</td><td>Equilibre las compensaciones y optimice su combinación de productos.</td><td>MaxDiff, conjoint, tarjetas de puntuación SKU</td><td><a href="https://chatgpt.com/g/g-6805975c2ad48191992a9647a6b2b94c-sami-portfolio-ai" target="_blank">Abrir GPT</a></td></tr>
-        <tr><td>SAMI Landscape AI</td><td>Decodifica tu terreno competitivo y descubre tendencias.</td><td>Las 5 fuerzas de Porter, STEEPLE, mapeo de espacios en blanco</td><td><a href="https://chatgpt.com/g/g-68059925d19c81918ea24544a27f7ea6-sami-landscape-ai" target="_blank">Abrir GPT</a></td></tr>
-        <tr><td>SAMI Positioning AI</td><td>Revela lo que realmente representa tu marca.</td><td>Mapeo perceptual, arquetipos, impulsores del NPS</td><td><a href="https://chatgpt.com/g/g-68059aed5cac8191aec46229e6f37bc6-sami-positioning-ai" target="_blank">Abrir GPT</a></td></tr>
-        <tr><td>SAMI Pricing AI</td><td>Identificar el precio que maximiza las ganancias y la percepción.</td><td>Van Westendorp, modelado de elasticidad</td><td><a href="https://chatgpt.com/g/g-68059c18bb248191bdc765aa51d1c78a-sami-pricing-ai" target="_blank">Abrir GPT</a></td></tr>
-        <tr><td>SAMI Incentives AI</td><td>Descubra qué recompensas realmente impulsan el compromiso y la lealtad.</td><td>ROI de cupones, SPIFF, seguimiento de la fricción</td><td><a href="https://chatgpt.com/g/g-68059d9541bc8191b136f977bdabeda5-sami-incentives-ai" target="_blank">Abrir GPT</a></td></tr>
-        <tr><td>SAMI VoC AI</td><td>Descifrar lo que los clientes realmente dicen, sienten y quieren decir.</td><td>Modelado de temas, sentimientos y detección de emociones</td><td><a href="https://chatgpt.com/g/g-68059edcd7dc8191b133390829d65818-sami-voc-ai" target="_blank">Abrir GPT</a></td></tr>
-      </tbody>
+<tr><td>SAMI.AI COLOMBIA</td><td>GPT especializado en análisis de mercado Colombiano.</td><td>Soporta análisis por estrato, scraping, emociones y matrices regionales.</td><td><a href="https://chatgpt.com/g/g-6803ba313cc88191b6a11e9cc37f0077-sami-ai-colombia" target="_blank">Acceder GPT</a></td></tr>
+<tr><td>SAMI AI ADVANCED ANALYTICAL TOOL</td><td>Advanced AI-Powered Data Analysis Across Any Format.</td><td>Specialized tool for in-depth market research and data analysis.</td><td><a href="https://chatgpt.com/g/g-NHiNlyxxG-innovation-scout" target="_blank">Acceder GPT</a></td></tr>
+<tr><td>SAMI Brand & Reputation AI</td><td>Evalúa y protege cómo se percibe tu marca.</td><td>Análisis de sentimientos, cambio de marca, métricas de confianza</td><td><a href="https://chatgpt.com/g/g-6805827d9358819197f942fd43ffbd55-sami-brand-reputation-ai" target="_blank">Acceder GPT</a></td></tr>
+<tr><td>SAMI Market Segmentation AI</td><td>Segmenta con inteligencia. Actúa estratégicamente.</td><td>Análisis de conglomerados, LCA, perfil B2B</td><td><a href="https://chatgpt.com/g/g-4yGbjzMlx-sami-segmentation" target="_blank">Acceder GPT</a></td></tr>
+<tr><td>SAMI Concept Testing & Screening</td><td>Identifique las mejores ideas antes de construir.</td><td>Evaluación de conceptos, singularidad y atractivo</td><td><a href="https://chatgpt.com/g/g-680586a0d004819188ada75368d4779d-sami-concept-testing-screening" target="_blank">Acceder GPT</a></td></tr>
+<tr><td>SAMI Customer Journey & Funnel AI</td><td>Descubra la fricción, los impulsores de fidelización y las señales de abandono.</td><td>Seguimiento de abandono, información de fidelización, desencadenantes de recompra</td><td><a href="https://chatgpt.com/g/g-68058999568081918d77595e64dc4820-sami-customer-journey-funnel-ai" target="_blank">Acceder GPT</a></td></tr>
+<tr><td>SAMI Product AI</td><td>Planificación, fijación de precios y posicionamiento de productos más inteligentes.</td><td>Priorización de funciones, optimización de la cartera</td><td><a href="https://chatgpt.com/g/g-68058d8874b081919ebda4f20474656f-sami-product-ai" target="_blank">Acceder GPT</a></td></tr>
+<tr><td>SAMI Go-to-Market AI</td><td>Mapee el rendimiento del producto y el impacto del marketing en el lanzamiento.</td><td>Seguimiento de lanzamientos, comentarios de uso, señales de fidelización</td><td><a href="https://chatgpt.com/g/g-68059111447481919df32b37bb6ecd73-sami-go-to-market-ai" target="_blank">Acceder GPT</a></td></tr>
+<tr><td>SAMI Drivers AI</td><td>Descubra qué impulsa la elección, la lealtad y la compra.</td><td>Modelado de Kano, JTBD, desencadenantes de compra</td><td><a href="https://chatgpt.com/g/g-68059403147c8191830645a8e0db687b-sami-drivers-ai" target="_blank">Acceder GPT</a></td></tr>
+<tr><td>SAMI Category & Target AI</td><td>Descubre quién es realmente tu audiencia.</td><td>Generación de personas, agrupación de estados de necesidad</td><td><a href="https://chatgpt.com/g/g-6805958782d481919d1bcc717d0c06e9-sami-category-target-ai" target="_blank">Acceder GPT</a></td></tr>
+<tr><td>SAMI Portfolio AI</td><td>Equilibre las compensaciones y optimice su combinación de productos.</td><td>MaxDiff, conjoint, tarjetas de puntuación SKU</td><td><a href="https://chatgpt.com/g/g-6805975c2ad48191992a9647a6b2b94c-sami-portfolio-ai" target="_blank">Acceder GPT</a></td></tr>
+<tr><td>SAMI Landscape AI</td><td>Decodifica tu terreno competitivo y descubre tendencias.</td><td>Las 5 fuerzas de Porter, STEEPLE, mapeo de espacios en blanco</td><td><a href="https://chatgpt.com/g/g-68059925d19c81918ea24544a27f7ea6-sami-landscape-ai" target="_blank">Acceder GPT</a></td></tr>
+<tr><td>SAMI Positioning AI</td><td>Revela lo que realmente representa tu marca.</td><td>Mapeo perceptual, arquetipos, impulsores del NPS</td><td><a href="https://chatgpt.com/g/g-68059aed5cac8191aec46229e6f37bc6-sami-positioning-ai" target="_blank">Acceder GPT</a></td></tr>
+<tr><td>SAMI Pricing AI</td><td>Identificar el precio que maximiza las ganancias y la percepción.</td><td>Van Westendorp, modelado de elasticidad</td><td><a href="https://chatgpt.com/g/g-68059c18bb248191bdc765aa51d1c78a-sami-pricing-ai" target="_blank">Acceder GPT</a></td></tr>
+<tr><td>SAMI Incentives AI</td><td>Descubra qué recompensas realmente impulsan el compromiso y la lealtad.</td><td>ROI de cupones, SPIFF, seguimiento de la fricción</td><td><a href="https://chatgpt.com/g/g-68059d9541bc8191b136f977bdabeda5-sami-incentives-ai" target="_blank">Acceder GPT</a></td></tr>
+<tr><td>SAMI VoC AI</td><td>Descifrar lo que los clientes realmente dicen, sienten y quieren decir.</td><td>Modelado de temas, sentimientos y detección de emociones</td><td><a href="https://chatgpt.com/g/g-68059edcd7dc8191b133390829d65818-sami-voc-ai" target="_blank">Acceder GPT</a></td></tr>
+</tbody>
     </table>
   </main>
 
