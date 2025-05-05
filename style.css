@@ -1,38 +1,31 @@
-/* SAMI.AI LATAM Custom Branding */
 
 body {
-  font-family: 'Segoe UI', Tahoma, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f4f7fb;
-  color: #1e2d3f;
+  background-color: #f8f9fa;
+  color: #333;
 }
 
 header {
+  background-color: #003366;
+  color: white;
   text-align: center;
-  padding: 40px 20px 20px;
-  background: linear-gradient(135deg, #001e3c, #00558c);
-  color: #ffffff;
+  padding: 30px 20px 20px;
 }
 
 header img {
   max-height: 120px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
-header h1 {
-  font-size: 32px;
-  margin: 10px 0 5px;
-}
-
-header p {
-  font-size: 16px;
-  margin: 0;
-  opacity: 0.9;
+h1 {
+  margin-top: 0;
+  font-size: 2em;
 }
 
 main {
-  padding: 30px;
+  padding: 20px;
   max-width: 1200px;
   margin: auto;
 }
@@ -40,45 +33,37 @@ main {
 table {
   width: 100%;
   border-collapse: collapse;
-  background: #ffffff;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
-thead {
-  background-color: #002c5e;
-  color: #ffffff;
+  margin-top: 30px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 th, td {
-  padding: 16px;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
   text-align: left;
-  border-bottom: 1px solid #e0e6ed;
-  font-size: 15px;
 }
 
-tbody tr:hover {
-  background-color: #f0f4fa;
+th {
+  background-color: #0059b3;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.9em;
 }
 
-a {
-  color: #00558c;
-  font-weight: 600;
-  text-decoration: none;
-  border-bottom: 2px solid transparent;
-  transition: all 0.2s ease-in-out;
+tr:nth-child(even) {
+  background-color: #f2f2f2;
 }
 
-a:hover {
-  color: #003d66;
-  border-bottom: 2px solid #0070cc;
+tr:hover {
+  background-color: #e6f7ff;
 }
 
 footer {
+  background-color: #003366;
+  color: white;
   text-align: center;
-  padding: 25px;
-  background-color: #001e3c;
-  color: #cccccc;
-  font-size: 14px;
+  padding: 15px;
+  margin-top: 30px;
+  font-size: 0.85em;
 }
