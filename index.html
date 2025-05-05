@@ -2,96 +2,86 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>SAMI AI Portfolio Dashboard – Bilingüe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAMI AI Portfolio Dashboard</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f7fa;
+      background-color: #f2f5f8;
     }
     header {
-      background-color: #0a2540;
+      background-color: #05294d;
       color: white;
       text-align: center;
-      padding: 30px 20px 20px;
+      padding: 20px;
     }
     header img {
-      max-height: 100px;
-      margin-bottom: 15px;
+      width: 50px;
     }
     h1 {
-      margin: 0;
-      font-size: 26px;
-    }
-    p {
       margin: 10px 0;
     }
-    .download-section {
+    .desc {
+      font-style: italic;
+      font-size: 0.9rem;
+    }
+    .button-container {
       text-align: center;
       margin: 20px 0;
     }
-    .download-button {
-      background-color: #4caf50;
+    .download-btn {
+      background-color: #4CAF50;
       color: white;
       padding: 10px 20px;
       text-decoration: none;
-      border-radius: 4px;
-      font-weight: bold;
-    }
-    .download-button:hover {
-      background-color: #3e8e41;
+      border-radius: 5px;
     }
     table {
       width: 90%;
-      margin: 30px auto;
+      margin: 20px auto;
       border-collapse: collapse;
       background-color: white;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
     th, td {
-      padding: 14px 16px;
+      border: 1px solid #ccc;
+      padding: 12px;
       text-align: left;
-      border-bottom: 1px solid #ddd;
     }
     th {
-      background-color: #e8f1fa;
+      background-color: #e9f0f7;
     }
-    tr:hover {
-      background-color: #f0f8ff;
-    }
-    td a.button-link {
-      background-color: #007acc;
+    .gpt-btn {
+      background-color: #007bff;
       color: white;
-      padding: 8px 12px;
+      padding: 6px 12px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
       text-decoration: none;
-      border-radius: 4px;
-      font-size: 14px;
-    }
-    td a.button-link:hover {
-      background-color: #005b99;
     }
     footer {
       text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
-      background-color: #e6e6e6;
+      font-size: 0.8rem;
+      color: #555;
+      margin: 30px 0;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="LOGO.png" alt="SAMI Logo">
+    <img src="https://carlosmsal22.github.io/SAMI-GPT-DEMOS/logo.png" alt="SAMI Logo">
     <h1>SAMI AI Portfolio Dashboard</h1>
-    <p>Explore nuestra suite de copilotos de IA diseñados para transformar decisiones estratégicas en LATAM.</p>
-    <p><em>Explore our suite of AI copilots to drive smarter decisions across LATAM.</em></p>
+    <p>Explore nuestra suite de copilotos de IA diseñados para transformar decisiones estratégicas en LATAM.<br><span class="desc">Explore our suite of AI copilots to drive smarter decisions across LATAM.</span></p>
   </header>
 
-  <div class="download-section">
-    <a href="SAMI_Portfolio_Resumen.pdf" class="download-button" target="_blank">📄 Descargar / Download PDF</a>
+  <div class="button-container">
+    <a class="download-btn" href="https://carlosmsal22.github.io/SAMI-GPT-DEMOS/SAMI_Portfolio_Summary.pdf" target="_blank">📄 Descargar / Download PDF</a>
   </div>
 
-  <!-- Tabla en Español -->
+  <!-- Tabla Español -->
   <table>
     <thead>
       <tr>
@@ -102,30 +92,28 @@
       </tr>
     </thead>
     <tbody>
-      <tr><td>SAMI.AI COLOMBIA</td><td>GPT especializado en análisis de mercado Colombiano.</td><td>Soporta análisis por estrato, scraping, emociones y matrices regionales.</td><td><a class="button-link" href="https://chatgpt.com/g/g-6803ba313cc88191b6a11e9cc37f0077-sami-ai-colombia" target="_blank">Acceder GPT</a></td></tr>
-      <!-- Puedes continuar agregando más filas como las anteriores -->
+      <tr><td>SAMI AI COLOMBIA</td><td>GPT especializado en análisis de mercado Colombiano.</td><td>Soporta análisis por estrato, scraping, emociones y matrices regionales.</td><td><a class="gpt-btn" href="https://chat.openai.com/g/g-uM5zNkF7g-sami-ai-colombia" target="_blank">Acceder GPT</a></td></tr>
+      <tr><td>SAMI AI ADVANCED ANALYTICAL TOOL</td><td>Advanced AI-Powered Data Analysis Across Any Format</td><td>Especializado en análisis profundo de data y mercado.</td><td><a class="gpt-btn" href="https://chat.openai.com/g/g-ZEXhAQZ6E-sami-ai-advanced-analytical-tool" target="_blank">Acceder GPT</a></td></tr>
+      <tr><td>SAMI Brand & Reputation AI</td><td>Evalúa y protege cómo se percibe tu marca.</td><td>Análisis de sentimientos, cambio de marca, métricas de confianza.</td><td><a class="gpt-btn" href="https://chat.openai.com/g/g-6EPMpOGEr-sami-brand-reputation-ai" target="_blank">Acceder GPT</a></td></tr>
+      <tr><td>SAMI Market Segmentation AI</td><td>Segmenta con inteligencia. Actúa estratégicamente.</td><td>Análisis de conglomerados, LCA, perfil B2B.</td><td><a class="gpt-btn" href="https://chat.openai.com/g/g-wxXqjKmR1-sami-market-segmentation-ai" target="_blank">Acceder GPT</a></td></tr>
+      <tr><td>SAMI Concept Testing & Screening</td><td>Identifica las mejores ideas antes de construir.</td><td>Evaluación de conceptos, singularidad y atractivo.</td><td><a class="gpt-btn" href="https://chat.openai.com/g/g-D7xKKMZlx-sami-concept-testing-screening" target="_blank">Acceder GPT</a></td></tr>
+      <tr><td>SAMI Customer Journey & Funnel AI</td><td>Descifra la fricción, los impulsores de fidelización y las señales de abandono.</td><td>Seguimiento de abandono, información de fidelización, desencadenantes de recompra.</td><td><a class="gpt-btn" href="https://chat.openai.com/g/g-XWb08Hvef-sami-customer-journey-funnel-ai" target="_blank">Acceder GPT</a></td></tr>
+      <tr><td>SAMI Product AI</td><td>Planificación, pricing de precisión y posicionamiento de producto inteligente.</td><td>Priorización de funciones, optimización de la cartera.</td><td><a class="gpt-btn" href="https://chat.openai.com/g/g-ECDPoIluM-sami-product-ai" target="_blank">Acceder GPT</a></td></tr>
+      <tr><td>SAMI Go-to-Market AI</td><td>Mapeo del rendimiento del producto y el impacto de marketing en el lanzamiento.</td><td>Seguimiento de lanzamientos, escenarios de uso, señales de fidelización.</td><td><a class="gpt-btn" href="https://chat.openai.com/g/g-GOZN3MX1m-sami-go-to-market-ai" target="_blank">Acceder GPT</a></td></tr>
+      <tr><td>SAMI Drivers AI</td><td>Descubre qué impulsa la elección, la lealtad y la compra.</td><td>Modelado de Kano, JTBD, desencadenantes de decisión.</td><td><a class="gpt-btn" href="https://chat.openai.com/g/g-LDaEYhJY3-sami-drivers-ai" target="_blank">Acceder GPT</a></td></tr>
+      <tr><td>SAMI Category & Target AI</td><td>Descubre quién es realmente tu audiencia.</td><td>Generación de segmentos, agrupación de estados de necesidad.</td><td><a class="gpt-btn" href="https://chat.openai.com/g/g-Km6w8FuhY-sami-category-target-ai" target="_blank">Acceder GPT</a></td></tr>
+      <tr><td>SAMI Portfolio AI</td><td>Equilibra tus compensaciones y optimiza tu combinación de productos.</td><td>MaxDiff, conjoint, targets de puntuación SKU.</td><td><a class="gpt-btn" href="https://chat.openai.com/g/g-JKcRCrTxF-sami-portfolio-ai" target="_blank">Acceder GPT</a></td></tr>
+      <tr><td>SAMI Landscape AI</td><td>Decodifica tu terreno competitivo y descubre tendencias futuras.</td><td>Las 5 fuerzas de Porter, STEEPLE, mapeo de espacios en blanco.</td><td><a class="gpt-btn" href="https://chat.openai.com/g/g-4fhgAyhlw-sami-landscape-ai" target="_blank">Acceder GPT</a></td></tr>
+      <tr><td>SAMI Positioning AI</td><td>Revela lo que realmente representa tu marca.</td><td>Mapeo perceptual, arquetipos, impulsores del NPS.</td><td><a class="gpt-btn" href="https://chat.openai.com/g/g-FZSlTk01m-sami-positioning-ai" target="_blank">Acceder GPT</a></td></tr>
+      <tr><td>SAMI Pricing AI</td><td>Identifica el precio que maximiza las ganancias y la percepción.</td><td>Van Westendorp, modelo de elasticidad.</td><td><a class="gpt-btn" href="https://chat.openai.com/g/g-yRNLsFRvx-sami-pricing-ai" target="_blank">Acceder GPT</a></td></tr>
+      <tr><td>SAMI Incentives AI</td><td>Descubra qué promociones realmente impulsan el compromiso y la lealtad.</td><td>ROI de cupones, SPIFF, seguimiento de fricción.</td><td><a class="gpt-btn" href="https://chat.openai.com/g/g-TPvru1UGZ-sami-incentives-ai" target="_blank">Acceder GPT</a></td></tr>
+      <tr><td>SAMI VoC AI</td><td>Descifra lo que los clientes realmente dicen, sienten y desean.</td><td>Modelado de temas, sentimientos y detección de emociones.</td><td><a class="gpt-btn" href="https://chat.openai.com/g/g-F3HSm4ZK2-sami-voc-ai" target="_blank">Acceder GPT</a></td></tr>
     </tbody>
   </table>
 
-  <!-- Tabla en Inglés -->
-  <table>
-    <thead>
-      <tr>
-        <th>Module Name</th>
-        <th>Tagline</th>
-        <th>Strategic Use Case</th>
-        <th>GPT Link</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>SAMI.AI COLOMBIA</td><td>GPT specialized in Colombian market analysis.</td><td>Supports stratified insights, scraping, emotions, and regional segmentation.</td><td><a class="button-link" href="https://chatgpt.com/g/g-6803ba313cc88191b6a11e9cc37f0077-sami-ai-colombia" target="_blank">Open GPT</a></td></tr>
-      <!-- Continue with English rows -->
-    </tbody>
-  </table>
-
+  <!-- Footer -->
   <footer>
-    © 2025 THE INSIGHTS AI | Created by SAMI.AI COLOMBIA
+    © 2025 THE INSIGHTS AI | Created by SAMI AI COLOMBIA
   </footer>
 </body>
 </html>
-
