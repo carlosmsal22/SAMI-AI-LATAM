@@ -125,11 +125,15 @@
   </header>
 
   <main>
+    <div style="text-align: center; margin-top: 20px;">
+      <button onclick="mostrarTabla('es')" style="padding: 10px 20px; margin: 5px; border: none; border-radius: 6px; background-color: #007acc; color: white; font-weight: bold; cursor: pointer;">🇪🇸 Español</button>
+      <button onclick="mostrarTabla('en')" style="padding: 10px 20px; margin: 5px; border: none; border-radius: 6px; background-color: #e1ecf4; color: #007acc; font-weight: bold; cursor: pointer;">🇬🇧 English</button>
+    </div>
     <div class="download-section">
       <a href="SAMI_Portfolio_Resumen.pdf" class="download-button" target="_blank">📄 Descargar Resumen PDF</a>
     </div>
 
-    <table>
+    <table id="tabla-es">
       <thead>
         <tr>
           <th>Nombre del Módulo</th>
@@ -143,9 +147,7 @@
       </tbody>
     </table>
 
-<h2 style="text-align: center; margin-top: 60px;">SAMI AI Portfolio – English Version</h2>
-
-<table>
+<table id="tabla-en" style="display: none;">
   <thead>
     <tr>
       <th>Module Name</th>
@@ -179,5 +181,19 @@
   <footer>
     <p>© 2025 THE INSIGHTS AI | Created by SAMI.AI COLOMBIA</p>
   </footer>
+<script>
+  function mostrarTabla(idioma) {
+    const tablaEs = document.getElementById('tabla-es');
+    const tablaEn = document.getElementById('tabla-en');
+
+    if (idioma === 'es') {
+      tablaEs.style.display = 'table';
+      tablaEn.style.display = 'none';
+    } else {
+      tablaEs.style.display = 'none';
+      tablaEn.style.display = 'table';
+    }
+  }
+</script>
 </body>
 </html>
