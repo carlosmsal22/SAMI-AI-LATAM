@@ -1,69 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>SUITE DE SOLUCIONES SAMI AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="LOGO.png" alt="SAMI Market Insights Logo">
+    <h1>SAMI AI Portfolio Dashboard</h1>
+    <p>Su conjunto completo de soluciones organizadas por función y valor estratégico.</p>
+  </header>
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f8f9fa;
-  color: #333;
-}
+  <main>
+    <div class="card">
+      <h2>SAMI.AI COLOMBIA</h2>
+      <p><strong>Tagline:</strong> GPT especializado en análisis de mercado Colombiano.</p>
+      <p><strong>Uso Estratégico:</strong> Soporta análisis por estrato, scraping, emociones y matrices regionales.</p>
+      <a href="https://chatgpt.com/g/g-6803ba313cc88191b6a11e9cc37f0077-sami-ai-colombia" target="_blank">Ir al GPT</a>
+    </div>
 
-header {
-  background-color: #003366;
-  color: white;
-  text-align: center;
-  padding: 30px 20px 20px;
-}
+    <div class="card">
+      <h2>SAMI Brand & Reputation AI</h2>
+      <p><strong>Tagline:</strong> Evalúa y protege cómo se percibe tu marca.</p>
+      <p><strong>Uso Estratégico:</strong> Análisis de sentimientos, cambio de marca, métricas de confianza.</p>
+      <a href="https://chatgpt.com/g/g-6805827d9358819197f942fd43ffbd55-sami-brand-reputation-ai" target="_blank">Ir al GPT</a>
+    </div>
 
-header img {
-  max-height: 120px;
-  margin-bottom: 10px;
-}
+    <!-- Continúa con los demás módulos usando la misma estructura -->
 
-h1 {
-  margin-top: 0;
-  font-size: 2em;
-}
+  </main>
 
-main {
-  padding: 20px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 30px;
-  background-color: white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-th, td {
-  padding: 12px 15px;
-  border: 1px solid #ccc;
-  text-align: left;
-}
-
-th {
-  background-color: #0059b3;
-  color: white;
-  text-transform: uppercase;
-  font-size: 0.9em;
-}
-
-tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-tr:hover {
-  background-color: #e6f7ff;
-}
-
-footer {
-  background-color: #003366;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  margin-top: 30px;
-  font-size: 0.85em;
-}
+  <footer>
+    <p>© 2025 THE INSIGHTS AI | Created by SAMI.AI COLOMBIA</p>
+  </footer>
+</body>
+</html>
