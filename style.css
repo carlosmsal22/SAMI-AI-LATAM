@@ -1,48 +1,84 @@
+/* SAMI.AI LATAM Custom Branding */
+
 body {
-  font-family: "Segoe UI", sans-serif;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
   margin: 0;
-  background: #f9f9fb;
-  color: #333;
+  padding: 0;
+  background: #f4f7fb;
+  color: #1e2d3f;
 }
 
 header {
-  background-color: #1e2a38;
-  color: #fff;
-  padding: 20px 40px;
   text-align: center;
+  padding: 40px 20px 20px;
+  background: linear-gradient(135deg, #001e3c, #00558c);
+  color: #ffffff;
+}
+
+header img {
+  max-height: 120px;
+  margin-bottom: 15px;
+}
+
+header h1 {
+  font-size: 32px;
+  margin: 10px 0 5px;
+}
+
+header p {
+  font-size: 16px;
+  margin: 0;
+  opacity: 0.9;
 }
 
 main {
-  padding: 40px;
+  padding: 30px;
+  max-width: 1200px;
+  margin: auto;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  background: #fff;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+thead {
+  background-color: #002c5e;
+  color: #ffffff;
 }
 
 th, td {
-  padding: 14px;
-  border-bottom: 1px solid #eee;
+  padding: 16px;
   text-align: left;
+  border-bottom: 1px solid #e0e6ed;
+  font-size: 15px;
 }
 
-th {
-  background-color: #f1f3f5;
-  color: #333;
-  font-weight: bold;
+tbody tr:hover {
+  background-color: #f0f4fa;
 }
 
-tr:hover {
-  background-color: #f6faff;
+a {
+  color: #00558c;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+  color: #003d66;
+  border-bottom: 2px solid #0070cc;
 }
 
 footer {
   text-align: center;
-  font-size: 0.85em;
-  padding: 20px;
-  background-color: #eaeaea;
-  color: #555;
+  padding: 25px;
+  background-color: #001e3c;
+  color: #cccccc;
+  font-size: 14px;
 }
