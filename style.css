@@ -1,38 +1,68 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>SUITE DE SOLUCIONES SAMI AI</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <img src="LOGO.png" alt="SAMI Market Insights Logo">
-    <h1>SAMI AI Portfolio Dashboard</h1>
-    <p>Su conjunto completo de soluciones organizadas por función y valor estratégico.</p>
-  </header>
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f6f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
 
-  <main>
-    <div class="card">
-      <h2>SAMI.AI COLOMBIA</h2>
-      <p><strong>Tagline:</strong> GPT especializado en análisis de mercado Colombiano.</p>
-      <p><strong>Uso Estratégico:</strong> Soporta análisis por estrato, scraping, emociones y matrices regionales.</p>
-      <a href="https://chatgpt.com/g/g-6803ba313cc88191b6a11e9cc37f0077-sami-ai-colombia" target="_blank">Ir al GPT</a>
-    </div>
+header {
+  text-align: center;
+  background-color: #002b5c;
+  padding: 40px 20px;
+  color: white;
+}
 
-    <div class="card">
-      <h2>SAMI Brand & Reputation AI</h2>
-      <p><strong>Tagline:</strong> Evalúa y protege cómo se percibe tu marca.</p>
-      <p><strong>Uso Estratégico:</strong> Análisis de sentimientos, cambio de marca, métricas de confianza.</p>
-      <a href="https://chatgpt.com/g/g-6805827d9358819197f942fd43ffbd55-sami-brand-reputation-ai" target="_blank">Ir al GPT</a>
-    </div>
+header img {
+  max-height: 100px;
+  margin-bottom: 10px;
+}
 
-    <!-- Continúa con los demás módulos usando la misma estructura -->
+main {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
 
-  </main>
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
 
-  <footer>
-    <p>© 2025 THE INSIGHTS AI | Created by SAMI.AI COLOMBIA</p>
-  </footer>
-</body>
-</html>
+th {
+  background: #0a2540;
+  color: white;
+  font-weight: bold;
+  padding: 16px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+td {
+  padding: 16px;
+  border-bottom: 1px solid #eee;
+  vertical-align: top;
+  font-size: 14px;
+}
+
+tr:hover {
+  background-color: #f0f8ff;
+}
+
+a.gpt-link {
+  background-color: #0a2540;
+  color: white;
+  padding: 8px 14px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+a.gpt-link:hover {
+  background-color: #0077b6;
+}
