@@ -67,23 +67,6 @@
     .download-button:hover {
       background-color: #3e8e41;
     }
-    .lang-buttons {
-      text-align: center;
-      margin-top: 15px;
-    }
-    .lang-buttons button {
-      margin: 0 5px;
-      padding: 8px 16px;
-      font-weight: bold;
-      border: none;
-      border-radius: 4px;
-      background-color: #0a2540;
-      color: white;
-      cursor: pointer;
-    }
-    .lang-buttons button:hover {
-      background-color: #003366;
-    }
   </style>
 </head>
 <body>
@@ -91,10 +74,6 @@
     <img src="LOGO.png" alt="SAMI Market Insights Logo">
     <h1>SAMI AI Portfolio Dashboard</h1>
     <p>Explore nuestra suite de copilotos de IA diseñados para transformar decisiones estratégicas en LATAM.</p>
-    <div class="lang-buttons">
-      <button onclick="showTable('es')">Español</button>
-      <button onclick="showTable('en')">English</button>
-    </div>
   </header>
 
   <main>
@@ -102,23 +81,29 @@
       <a href="SAMI_Portfolio_Resumen.pdf" class="download-button" target="_blank">📄 Descargar Resumen PDF</a>
     </div>
 
-    <table id="tabla-es">
+    <table>
       <thead>
         <tr><th>Nombre del Módulo</th><th>Tagline</th><th>Uso Estratégico</th><th>Ir al GPT</th></tr>
       </thead>
       <tbody>
-        <!-- 16 filas en español -->
-        <!-- Reemplazar con contenido generado -->
+        <tr><td>SAMI.AI COLOMBIA</td><td>GPT especializado en análisis de mercado Colombiano.</td><td>Soporta análisis por estrato, scraping, emociones y matrices regionales.</td><td><a href='#'>Acceder GPT</a></td></tr>
+        <tr><td>SAMI AI ADVANCED ANALYTICAL TOOL</td><td>Advanced AI-Powered Data Analysis Across Any Format.</td><td>Specialized tool for in-depth market research and data analysis.</td><td><a href='#'>Acceder GPT</a></td></tr>
+        <tr><td>SAMI Brand & Reputation AI</td><td>Evalúa y protege cómo se percibe tu marca.</td><td>Análisis de sentimientos, cambio de marca, métricas de confianza</td><td><a href='#'>Acceder GPT</a></td></tr>
+        <!-- ...otros 13 módulos en español ... -->
       </tbody>
     </table>
 
-    <table id="tabla-en" style="display: none;">
+    <br><br>
+    <h2 style="text-align: center;">English Version (Reference Only)</h2>
+    <table>
       <thead>
         <tr><th>Module Name</th><th>Tagline</th><th>Strategic Use</th><th>Go to GPT</th></tr>
       </thead>
       <tbody>
-        <!-- 16 filas en inglés -->
-        <!-- Reemplazar con contenido generado -->
+        <tr><td>SAMI.AI COLOMBIA</td><td>GPT specialized in Colombian market analysis.</td><td>Supports analysis by strata, scraping, emotions, and regional matrices.</td><td><a href='#'>Go to GPT</a></td></tr>
+        <tr><td>SAMI AI ADVANCED ANALYTICAL TOOL</td><td>Advanced AI-Powered Data Analysis Across Any Format.</td><td>Specialized tool for in-depth market research and data analysis.</td><td><a href='#'>Go to GPT</a></td></tr>
+        <tr><td>SAMI Brand & Reputation AI</td><td>Evaluates and protects how your brand is perceived.</td><td>Sentiment analysis, rebranding insights, trust metrics</td><td><a href='#'>Go to GPT</a></td></tr>
+        <!-- ...otros 13 módulos en inglés ... -->
       </tbody>
     </table>
   </main>
@@ -126,12 +111,5 @@
   <footer>
     <p>© 2025 THE INSIGHTS AI | Created by SAMI.AI COLOMBIA</p>
   </footer>
-
-  <script>
-    function showTable(lang) {
-      document.getElementById('tabla-es').style.display = (lang === 'es') ? 'table' : 'none';
-      document.getElementById('tabla-en').style.display = (lang === 'en') ? 'table' : 'none';
-    }
-  </script>
 </body>
 </html>
