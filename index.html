@@ -1,119 +1,84 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SAMI AI Portfolio Dashboard</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f2f5f8;
-    }
-    header {
-      background-color: #05294d;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-    header img {
-      width: 50px;
-    }
-    h1 {
-      margin: 10px 0;
-    }
-    .desc {
-      font-style: italic;
-      font-size: 0.9rem;
-    }
-    .button-container {
-      text-align: center;
-      margin: 20px 0;
-    }
-    .download-btn {
-      background-color: #4CAF50;
-      color: white;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-    table {
-      width: 90%;
-      margin: 20px auto;
-      border-collapse: collapse;
-      background-color: white;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    th, td {
-      border: 1px solid #ccc;
-      padding: 12px;
-      text-align: left;
-    }
-    th {
-      background-color: #e9f0f7;
-    }
-    .gpt-btn {
-      background-color: #007bff;
-      color: white;
-      padding: 6px 12px;
-      border: none;
-      border-radius: 3px;
-      cursor: pointer;
-      text-decoration: none;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.8rem;
-      color: #555;
-      margin: 30px 0;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAMI.GPT - Demo</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
 </head>
 <body>
-  <header>
-    <img src="https://carlosmsal22.github.io/SAMI-GPT-DEMOS/logo.png" alt="SAMI Logo">
-    <h1>SAMI AI Portfolio Dashboard</h1>
-    <p>Explore nuestra suite de copilotos de IA diseñados para transformar decisiones estratégicas en LATAM.<br><span class="desc">Explore our suite of AI copilots to drive smarter decisions across LATAM.</span></p>
-  </header>
+    <header>
+        <h1>Bienvenido a SAMI.GPT</h1>
+        <p>Seleccione el idioma para ver los módulos:</p>
+        <!-- Selector de idioma -->
+        <button onclick="showTable('es')" class="btn btn-language">Español</button>
+        <button onclick="showTable('en')" class="btn btn-language">English</button>
+    </header>
 
-  <div class="button-container">
-    <a class="download-btn" href="https://carlosmsal22.github.io/SAMI-GPT-DEMOS/SAMI_Portfolio_Summary.pdf" target="_blank">📄 Descargar / Download PDF</a>
-  </div>
+    <!-- Contenedor de tablas -->
+    <div id="tables-container">
+        <!-- Tabla en Español -->
+        <table id="tabla-es" style="display: none;">
+            <thead>
+                <tr><th>Modulo</th><th>Descripción</th><th>Acción</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>SAMI Strategic Overview</strong></td><td>Resumen ejecutivo de las capacidades y visión estratégica de SAMI.AI.</td><td><a href="pdfs/SAMI_Strategic_Overview_ES.pdf" target="_blank" class="btn btn-primary">📄 Descargar PDF</a></td></tr>
+                <tr><td><strong>SAMI LATAM</strong></td><td>Enfoque regional de SAMI.AI para empresas y mercados en América Latina.</td><td><a href="pdfs/SAMI_LATAM_ES.pdf" target="_blank" class="btn btn-primary">📄 Descargar PDF</a></td></tr>
+                <tr><td><strong>SAMI Brand Strategy</strong></td><td>Optimización de la estrategia de marca mediante análisis conversacional.</td><td><a href="pdfs/SAMI_Brand_Strategy_ES.pdf" target="_blank" class="btn btn-primary">📄 Descargar PDF</a></td></tr>
+                <tr><td><strong>SAMI Competitive Strategy</strong></td><td>Identificación de ventajas competitivas usando insights de clientes.</td><td><a href="pdfs/SAMI_Competitive_Strategy_ES.pdf" target="_blank" class="btn btn-primary">📄 Descargar PDF</a></td></tr>
+                <tr><td><strong>SAMI Journey Funnel</strong></td><td>Visualización de cada etapa del recorrido del cliente para mejorar conversiones.</td><td><a href="pdfs/SAMI_Journey_Funnel_ES.pdf" target="_blank" class="btn btn-primary">📄 Descargar PDF</a></td></tr>
+                <tr><td><strong>SAMI Brand Positioning</strong></td><td>Análisis de posicionamiento de marca en tiempo real con IA conversacional.</td><td><a href="pdfs/SAMI_Brand_Positioning_ES.pdf" target="_blank" class="btn btn-primary">📄 Descargar PDF</a></td></tr>
+                <tr><td><strong>SAMI Data Analysis</strong></td><td>Exploración y visualización de datos conversacionales estructurados.</td><td><a href="pdfs/SAMI_Data_Analysis_ES.pdf" target="_blank" class="btn btn-primary">📄 Descargar PDF</a></td></tr>
+                <tr><td><strong>SAMI Personas</strong></td><td>Generación automática de buyer personas a partir de interacciones reales.</td><td><a href="pdfs/SAMI_Personas_ES.pdf" target="_blank" class="btn btn-primary">📄 Descargar PDF</a></td></tr>
+                <tr><td><strong>SAMI Jobs to be Done</strong></td><td>Identificación de necesidades del cliente basadas en el marco JTBD.</td><td><a href="pdfs/SAMI_Jobs_to_be_Done_ES.pdf" target="_blank" class="btn btn-primary">📄 Descargar PDF</a></td></tr>
+                <tr><td><strong>SAMI Pain Points</strong></td><td>Detección de fricciones y puntos de dolor en la experiencia del cliente.</td><td><a href="pdfs/SAMI_Pain_Points_ES.pdf" target="_blank" class="btn btn-primary">📄 Descargar PDF</a></td></tr>
+                <tr><td><strong>SAMI Product Feedback</strong></td><td>Análisis de retroalimentación sobre productos para acelerar mejoras.</td><td><a href="pdfs/SAMI_Product_Feedback_ES.pdf" target="_blank" class="btn btn-primary">📄 Descargar PDF</a></td></tr>
+                <tr><td><strong>SAMI Satisfaction (NPS)</strong></td><td>Cálculo del Net Promoter Score con análisis de texto enriquecido.</td><td><a href="pdfs/SAMI_Satisfaction_NPS_ES.pdf" target="_blank" class="btn btn-primary">📄 Descargar PDF</a></td></tr>
+                <tr><td><strong>SAMI Kano Model</strong></td><td>Clasificación de características del producto según el Modelo Kano.</td><td><a href="pdfs/SAMI_Kano_Model_ES.pdf" target="_blank" class="btn btn-primary">📄 Descargar PDF</a></td></tr>
+                <tr><td><strong>SAMI Product Opportunities</strong></td><td>Mapeo de oportunidades de producto a partir de la voz del cliente.</td><td><a href="pdfs/SAMI_Product_Opportunities_ES.pdf" target="_blank" class="btn btn-primary">📄 Descargar PDF</a></td></tr>
+                <tr><td><strong>SAMI Market Trends</strong></td><td>Identificación de tendencias emergentes mediante inteligencia conversacional.</td><td><a href="pdfs/SAMI_Market_Trends_ES.pdf" target="_blank" class="btn btn-primary">📄 Descargar PDF</a></td></tr>
+                <tr><td><strong>SAMI AI Co-Creation</strong></td><td>Co-creación de soluciones con clientes utilizando análisis guiado por IA.</td><td><a href="pdfs/SAMI_AI_Co_Creation_ES.pdf" target="_blank" class="btn btn-primary">📄 Descargar PDF</a></td></tr>
+            </tbody>
+        </table>
 
-  <!-- Tabla Español -->
-  <table>
-    <thead>
-      <tr>
-        <th>Nombre del Módulo</th>
-        <th>Tagline</th>
-        <th>Uso Estratégico</th>
-        <th>Ir al GPT</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>SAMI AI COLOMBIA</td><td>GPT especializado en análisis de mercado Colombiano.</td><td>Soporta análisis por estrato, scraping, emociones y matrices regionales.</td><td><a class="gpt-btn" href="https://chat.openai.com/g/g-uM5zNkF7g-sami-ai-colombia" target="_blank">Acceder GPT</a></td></tr>
-      <tr><td>SAMI AI ADVANCED ANALYTICAL TOOL</td><td>Advanced AI-Powered Data Analysis Across Any Format</td><td>Especializado en análisis profundo de data y mercado.</td><td><a class="gpt-btn" href="https://chat.openai.com/g/g-ZEXhAQZ6E-sami-ai-advanced-analytical-tool" target="_blank">Acceder GPT</a></td></tr>
-      <tr><td>SAMI Brand & Reputation AI</td><td>Evalúa y protege cómo se percibe tu marca.</td><td>Análisis de sentimientos, cambio de marca, métricas de confianza.</td><td><a class="gpt-btn" href="https://chat.openai.com/g/g-6EPMpOGEr-sami-brand-reputation-ai" target="_blank">Acceder GPT</a></td></tr>
-      <tr><td>SAMI Market Segmentation AI</td><td>Segmenta con inteligencia. Actúa estratégicamente.</td><td>Análisis de conglomerados, LCA, perfil B2B.</td><td><a class="gpt-btn" href="https://chat.openai.com/g/g-wxXqjKmR1-sami-market-segmentation-ai" target="_blank">Acceder GPT</a></td></tr>
-      <tr><td>SAMI Concept Testing & Screening</td><td>Identifica las mejores ideas antes de construir.</td><td>Evaluación de conceptos, singularidad y atractivo.</td><td><a class="gpt-btn" href="https://chat.openai.com/g/g-D7xKKMZlx-sami-concept-testing-screening" target="_blank">Acceder GPT</a></td></tr>
-      <tr><td>SAMI Customer Journey & Funnel AI</td><td>Descifra la fricción, los impulsores de fidelización y las señales de abandono.</td><td>Seguimiento de abandono, información de fidelización, desencadenantes de recompra.</td><td><a class="gpt-btn" href="https://chat.openai.com/g/g-XWb08Hvef-sami-customer-journey-funnel-ai" target="_blank">Acceder GPT</a></td></tr>
-      <tr><td>SAMI Product AI</td><td>Planificación, pricing de precisión y posicionamiento de producto inteligente.</td><td>Priorización de funciones, optimización de la cartera.</td><td><a class="gpt-btn" href="https://chat.openai.com/g/g-ECDPoIluM-sami-product-ai" target="_blank">Acceder GPT</a></td></tr>
-      <tr><td>SAMI Go-to-Market AI</td><td>Mapeo del rendimiento del producto y el impacto de marketing en el lanzamiento.</td><td>Seguimiento de lanzamientos, escenarios de uso, señales de fidelización.</td><td><a class="gpt-btn" href="https://chat.openai.com/g/g-GOZN3MX1m-sami-go-to-market-ai" target="_blank">Acceder GPT</a></td></tr>
-      <tr><td>SAMI Drivers AI</td><td>Descubre qué impulsa la elección, la lealtad y la compra.</td><td>Modelado de Kano, JTBD, desencadenantes de decisión.</td><td><a class="gpt-btn" href="https://chat.openai.com/g/g-LDaEYhJY3-sami-drivers-ai" target="_blank">Acceder GPT</a></td></tr>
-      <tr><td>SAMI Category & Target AI</td><td>Descubre quién es realmente tu audiencia.</td><td>Generación de segmentos, agrupación de estados de necesidad.</td><td><a class="gpt-btn" href="https://chat.openai.com/g/g-Km6w8FuhY-sami-category-target-ai" target="_blank">Acceder GPT</a></td></tr>
-      <tr><td>SAMI Portfolio AI</td><td>Equilibra tus compensaciones y optimiza tu combinación de productos.</td><td>MaxDiff, conjoint, targets de puntuación SKU.</td><td><a class="gpt-btn" href="https://chat.openai.com/g/g-JKcRCrTxF-sami-portfolio-ai" target="_blank">Acceder GPT</a></td></tr>
-      <tr><td>SAMI Landscape AI</td><td>Decodifica tu terreno competitivo y descubre tendencias futuras.</td><td>Las 5 fuerzas de Porter, STEEPLE, mapeo de espacios en blanco.</td><td><a class="gpt-btn" href="https://chat.openai.com/g/g-4fhgAyhlw-sami-landscape-ai" target="_blank">Acceder GPT</a></td></tr>
-      <tr><td>SAMI Positioning AI</td><td>Revela lo que realmente representa tu marca.</td><td>Mapeo perceptual, arquetipos, impulsores del NPS.</td><td><a class="gpt-btn" href="https://chat.openai.com/g/g-FZSlTk01m-sami-positioning-ai" target="_blank">Acceder GPT</a></td></tr>
-      <tr><td>SAMI Pricing AI</td><td>Identifica el precio que maximiza las ganancias y la percepción.</td><td>Van Westendorp, modelo de elasticidad.</td><td><a class="gpt-btn" href="https://chat.openai.com/g/g-yRNLsFRvx-sami-pricing-ai" target="_blank">Acceder GPT</a></td></tr>
-      <tr><td>SAMI Incentives AI</td><td>Descubra qué promociones realmente impulsan el compromiso y la lealtad.</td><td>ROI de cupones, SPIFF, seguimiento de fricción.</td><td><a class="gpt-btn" href="https://chat.openai.com/g/g-TPvru1UGZ-sami-incentives-ai" target="_blank">Acceder GPT</a></td></tr>
-      <tr><td>SAMI VoC AI</td><td>Descifra lo que los clientes realmente dicen, sienten y desean.</td><td>Modelado de temas, sentimientos y detección de emociones.</td><td><a class="gpt-btn" href="https://chat.openai.com/g/g-F3HSm4ZK2-sami-voc-ai" target="_blank">Acceder GPT</a></td></tr>
-    </tbody>
-  </table>
+        <!-- Tabla en Inglés -->
+        <table id="tabla-en" style="display: none;">
+            <thead>
+                <tr><th>Module</th><th>Description</th><th>Action</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>SAMI Strategic Overview</strong></td><td>Executive summary of SAMI.AI's capabilities and strategic vision.</td><td><a href="pdfs/SAMI_Strategic_Overview_EN.pdf" target="_blank" class="btn btn-primary">📄 Download PDF</a></td></tr>
+                <tr><td><strong>SAMI LATAM</strong></td><td>Regional focus of SAMI.AI for businesses and markets in Latin America.</td><td><a href="pdfs/SAMI_LATAM_EN.pdf" target="_blank" class="btn btn-primary">📄 Download PDF</a></td></tr>
+                <tr><td><strong>SAMI Brand Strategy</strong></td><td>Optimizing brand strategy using conversational analysis.</td><td><a href="pdfs/SAMI_Brand_Strategy_EN.pdf" target="_blank" class="btn btn-primary">📄 Download PDF</a></td></tr>
+                <tr><td><strong>SAMI Competitive Strategy</strong></td><td>Identifying competitive advantages using customer insights.</td><td><a href="pdfs/SAMI_Competitive_Strategy_EN.pdf" target="_blank" class="btn btn-primary">📄 Download PDF</a></td></tr>
+                <tr><td><strong>SAMI Journey Funnel</strong></td><td>Visualizing each stage of the customer journey to improve conversions.</td><td><a href="pdfs/SAMI_Journey_Funnel_EN.pdf" target="_blank" class="btn btn-primary">📄 Download PDF</a></td></tr>
+                <tr><td><strong>SAMI Brand Positioning</strong></td><td>Real-time brand positioning analysis with conversational AI.</td><td><a href="pdfs/SAMI_Brand_Positioning_EN.pdf" target="_blank" class="btn btn-primary">📄 Download PDF</a></td></tr>
+                <tr><td><strong>SAMI Data Analysis</strong></td><td>Exploration and visualization of structured conversational data.</td><td><a href="pdfs/SAMI_Data_Analysis_EN.pdf" target="_blank" class="btn btn-primary">📄 Download PDF</a></td></tr>
+                <tr><td><strong>SAMI Personas</strong></td><td>Automatic generation of buyer personas from real interactions.</td><td><a href="pdfs/SAMI_Personas_EN.pdf" target="_blank" class="btn btn-primary">📄 Download PDF</a></td></tr>
+                <tr><td><strong>SAMI Jobs to be Done</strong></td><td>Identifying customer needs using the Jobs to Be Done framework.</td><td><a href="pdfs/SAMI_Jobs_to_be_Done_EN.pdf" target="_blank" class="btn btn-primary">📄 Download PDF</a></td></tr>
+                <tr><td><strong>SAMI Pain Points</strong></td><td>Detection of frictions and pain points in customer experience.</td><td><a href="pdfs/SAMI_Pain_Points_EN.pdf" target="_blank" class="btn btn-primary">📄 Download PDF</a></td></tr>
+                <tr><td><strong>SAMI Product Feedback</strong></td><td>Analyzing product feedback to accelerate improvements.</td><td><a href="pdfs/SAMI_Product_Feedback_EN.pdf" target="_blank" class="btn btn-primary">📄 Download PDF</a></td></tr>
+                <tr><td><strong>SAMI Satisfaction (NPS)</strong></td><td>Net Promoter Score calculation with enriched text analysis.</td><td><a href="pdfs/SAMI_Satisfaction_NPS_EN.pdf" target="_blank" class="btn btn-primary">📄 Download PDF</a></td></tr>
+                <tr><td><strong>SAMI Kano Model</strong></td><td>Classification of product features using the Kano Model.</td><td><a href="pdfs/SAMI_Kano_Model_EN.pdf" target="_blank" class="btn btn-primary">📄 Download PDF</a></td></tr>
+                <tr><td><strong>SAMI Product Opportunities</strong></td><td>Mapping product opportunities from the voice of the customer.</td><td><a href="pdfs/SAMI_Product_Opportunities_EN.pdf" target="_blank" class="btn btn-primary">📄 Download PDF</a></td></tr>
+                <tr><td><strong>SAMI Market Trends</strong></td><td>Identifying emerging trends using conversational intelligence.</td><td><a href="pdfs/SAMI_Market_Trends_EN.pdf" target="_blank" class="btn btn-primary">📄 Download PDF</a></td></tr>
+                <tr><td><strong>SAMI AI Co-Creation</strong></td><td>Co-creating solutions with customers using AI-guided analysis.</td><td><a href="pdfs/SAMI_AI_Co_Creation_EN.pdf" target="_blank" class="btn btn-primary">📄 Download PDF</a></td></tr>
+            </tbody>
+        </table>
+    </div>
 
-  <!-- Footer -->
-  <footer>
-    © 2025 THE INSIGHTS AI | Created by SAMI AI COLOMBIA
-  </footer>
+    <script>
+        function showTable(language) {
+            if (language === 'es') {
+                document.getElementById('tabla-es').style.display = 'table';
+                document.getElementById('tabla-en').style.display = 'none';
+            } else if (language === 'en') {
+                document.getElementById('tabla-es').style.display = 'none';
+                document.getElementById('tabla-en').style.display = 'table';
+            }
+        }
+    </script>
 </body>
 </html>
