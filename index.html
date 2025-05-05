@@ -2,88 +2,124 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SUITE DE SOLUCIONES SAMI AI</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #0a2540 0%, #f9f9f9 30%);
       color: #333;
     }
     header {
       text-align: center;
-      padding: 30px 10px 10px;
-      background-color: #0a2540;
+      padding: 40px 20px 20px;
       color: white;
     }
     header img {
       max-height: 100px;
       margin-bottom: 10px;
     }
+    header h1 {
+      margin: 10px 0 5px;
+      font-size: 2em;
+    }
+    header p {
+      margin: 0;
+      font-size: 1.1em;
+    }
     main {
       padding: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .download-section {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .download-button {
+      background-color: #4caf50;
+      color: white;
+      padding: 12px 24px;
+      font-size: 1em;
+      text-decoration: none;
+      border-radius: 6px;
+      display: inline-block;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    .download-button:hover {
+      background-color: #45a049;
     }
     table {
       width: 100%;
       border-collapse: collapse;
       margin-top: 20px;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
     th, td {
-      padding: 12px 15px;
+      padding: 14px 16px;
       text-align: left;
-      border-bottom: 1px solid #ddd;
+      border-bottom: 1px solid #eee;
     }
     th {
       background-color: #e1ecf4;
+      font-weight: bold;
     }
     tr:hover {
       background-color: #f1f9ff;
     }
-    td a.button-link {
+    a.button-link {
       background-color: #007acc;
       color: white;
       padding: 8px 14px;
       text-decoration: none;
       border-radius: 4px;
       display: inline-block;
+      font-weight: bold;
     }
-    td a.button-link:hover {
+    a.button-link:hover {
       background-color: #005b99;
     }
     footer {
       text-align: center;
       padding: 20px;
-      background-color: #eee;
       font-size: 0.9em;
+      background-color: #f0f0f0;
+      margin-top: 40px;
     }
-    .download-section {
-      text-align: center;
-      margin-top: 20px;
-    }
-    .download-button {
-      background-color: #4caf50;
-      color: white;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 4px;
-      display: inline-block;
-      margin-top: 10px;
-    }
-    .download-button:hover {
-      background-color: #3e8e41;
-    }
-    @media screen and (max-width: 768px) {
-      table {
+    @media (max-width: 768px) {
+      table, thead, tbody, th, td, tr {
         display: block;
-        overflow-x: auto;
+      }
+      th {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+      }
+      td {
+        position: relative;
+        padding-left: 50%;
+        border: none;
+        border-bottom: 1px solid #eee;
+      }
+      td:before {
+        position: absolute;
+        top: 12px;
+        left: 16px;
+        width: 45%;
+        padding-right: 10px;
+        font-weight: bold;
+        white-space: nowrap;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="LOGO.png" alt="SAMI Market Insights Logo">
+    <img src="LOGO.png" alt="SAMI Logo">
     <h1>SAMI AI Portfolio Dashboard</h1>
     <p>Explore nuestra suite de copilotos de IA diseñados para transformar decisiones estratégicas en LATAM.</p>
   </header>
@@ -92,6 +128,7 @@
     <div class="download-section">
       <a href="SAMI_Portfolio_Resumen.pdf" class="download-button" target="_blank">📄 Descargar Resumen PDF</a>
     </div>
+
     <table>
       <thead>
         <tr>
@@ -102,10 +139,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr><td>SAMI.AI COLOMBIA</td><td>GPT especializado en análisis de mercado Colombiano.</td><td>Soporta análisis por estrato, scraping, emociones y matrices regionales.</td><td><a href="https://chatgpt.com/g/g-6803ba313cc88191b6a11e9cc37f0077-sami-ai-colombia" target="_blank" class="button-link">Acceder GPT</a></td></tr>
-        <tr><td>SAMI AI ADVANCED ANALYTICAL TOOL</td><td>Advanced AI-Powered Data Analysis Across Any Format.</td><td>Herramienta especializada para investigación de mercados y análisis de datos.</td><td><a href="https://chatgpt.com/g/g-NHiNlyxxG-innovation-scout" target="_blank" class="button-link">Acceder GPT</a></td></tr>
-        <tr><td>SAMI Brand & Reputation AI</td><td>Evalúa y protege cómo se percibe tu marca.</td><td>Análisis de sentimientos, cambio de marca, métricas de confianza</td><td><a href="https://chatgpt.com/g/g-6805827d9358819197f942fd43ffbd55-sami-brand-reputation-ai" target="_blank" class="button-link">Acceder GPT</a></td></tr>
-        <!-- Agregar aquí las otras 13 filas con estilo "button-link" -->
+        <!-- Aquí se insertarían las 16 filas con botones estilo azul -->
       </tbody>
     </table>
   </main>
