@@ -4,10 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SAMI.GPT - Demo</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+    <style>
+        /* Basic Styling */
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        header { margin-bottom: 20px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 10px; text-align: left; border: 1px solid #ddd; }
+        th { background-color: #f2f2f2; }
+        .btn { padding: 8px 16px; background-color: #007bff; color: white; text-decoration: none; border-radius: 4px; }
+        .btn:hover { background-color: #0056b3; }
+        .btn-language { margin-right: 10px; padding: 8px 16px; background-color: #28a745; color: white; border-radius: 4px; }
+        .btn-language:hover { background-color: #218838; }
+    </style>
 </head>
 <body>
+
     <header>
         <h1>Bienvenido a SAMI.GPT</h1>
         <p>Seleccione el idioma para ver los módulos:</p>
@@ -24,22 +35,14 @@
                 <tr><th>Modulo</th><th>Descripción</th><th>Acción</th></tr>
             </thead>
             <tbody>
-                <tr><td><strong>SAMI Strategic Overview</strong></td><td>Resumen ejecutivo de las capacidades y visión estratégica de SAMI.AI.</td><td><a href="pdfs/SAMI_Strategic_Overview_ES.pdf" target="_blank" class="btn btn-primary">📄 Descargar PDF</a></td></tr>
-                <tr><td><strong>SAMI LATAM</strong></td><td>Enfoque regional de SAMI.AI para empresas y mercados en América Latina.</td><td><a href="pdfs/SAMI_LATAM_ES.pdf" target="_blank" class="btn btn-primary">📄 Descargar PDF</a></td></tr>
-                <tr><td><strong>SAMI Brand Strategy</strong></td><td>Optimización de la estrategia de marca mediante análisis conversacional.</td><td><a href="pdfs/SAMI_Brand_Strategy_ES.pdf" target="_blank" class="btn btn-primary">📄 Descargar PDF</a></td></tr>
-                <tr><td><strong>SAMI Competitive Strategy</strong></td><td>Identificación de ventajas competitivas usando insights de clientes.</td><td><a href="pdfs/SAMI_Competitive_Strategy_ES.pdf" target="_blank" class="btn btn-primary">📄 Descargar PDF</a></td></tr>
-                <tr><td><strong>SAMI Journey Funnel</strong></td><td>Visualización de cada etapa del recorrido del cliente para mejorar conversiones.</td><td><a href="pdfs/SAMI_Journey_Funnel_ES.pdf" target="_blank" class="btn btn-primary">📄 Descargar PDF</a></td></tr>
-                <tr><td><strong>SAMI Brand Positioning</strong></td><td>Análisis de posicionamiento de marca en tiempo real con IA conversacional.</td><td><a href="pdfs/SAMI_Brand_Positioning_ES.pdf" target="_blank" class="btn btn-primary">📄 Descargar PDF</a></td></tr>
-                <tr><td><strong>SAMI Data Analysis</strong></td><td>Exploración y visualización de datos conversacionales estructurados.</td><td><a href="pdfs/SAMI_Data_Analysis_ES.pdf" target="_blank" class="btn btn-primary">📄 Descargar PDF</a></td></tr>
-                <tr><td><strong>SAMI Personas</strong></td><td>Generación automática de buyer personas a partir de interacciones reales.</td><td><a href="pdfs/SAMI_Personas_ES.pdf" target="_blank" class="btn btn-primary">📄 Descargar PDF</a></td></tr>
-                <tr><td><strong>SAMI Jobs to be Done</strong></td><td>Identificación de necesidades del cliente basadas en el marco JTBD.</td><td><a href="pdfs/SAMI_Jobs_to_be_Done_ES.pdf" target="_blank" class="btn btn-primary">📄 Descargar PDF</a></td></tr>
-                <tr><td><strong>SAMI Pain Points</strong></td><td>Detección de fricciones y puntos de dolor en la experiencia del cliente.</td><td><a href="pdfs/SAMI_Pain_Points_ES.pdf" target="_blank" class="btn btn-primary">📄 Descargar PDF</a></td></tr>
-                <tr><td><strong>SAMI Product Feedback</strong></td><td>Análisis de retroalimentación sobre productos para acelerar mejoras.</td><td><a href="pdfs/SAMI_Product_Feedback_ES.pdf" target="_blank" class="btn btn-primary">📄 Descargar PDF</a></td></tr>
-                <tr><td><strong>SAMI Satisfaction (NPS)</strong></td><td>Cálculo del Net Promoter Score con análisis de texto enriquecido.</td><td><a href="pdfs/SAMI_Satisfaction_NPS_ES.pdf" target="_blank" class="btn btn-primary">📄 Descargar PDF</a></td></tr>
-                <tr><td><strong>SAMI Kano Model</strong></td><td>Clasificación de características del producto según el Modelo Kano.</td><td><a href="pdfs/SAMI_Kano_Model_ES.pdf" target="_blank" class="btn btn-primary">📄 Descargar PDF</a></td></tr>
-                <tr><td><strong>SAMI Product Opportunities</strong></td><td>Mapeo de oportunidades de producto a partir de la voz del cliente.</td><td><a href="pdfs/SAMI_Product_Opportunities_ES.pdf" target="_blank" class="btn btn-primary">📄 Descargar PDF</a></td></tr>
-                <tr><td><strong>SAMI Market Trends</strong></td><td>Identificación de tendencias emergentes mediante inteligencia conversacional.</td><td><a href="pdfs/SAMI_Market_Trends_ES.pdf" target="_blank" class="btn btn-primary">📄 Descargar PDF</a></td></tr>
-                <tr><td><strong>SAMI AI Co-Creation</strong></td><td>Co-creación de soluciones con clientes utilizando análisis guiado por IA.</td><td><a href="pdfs/SAMI_AI_Co_Creation_ES.pdf" target="_blank" class="btn btn-primary">📄 Descargar PDF</a></td></tr>
+                <tr><td><strong>SAMI Strategic Overview</strong></td><td>Resumen ejecutivo de las capacidades y visión estratégica de SAMI.AI.</td><td><a href="pdfs/SAMI_Strategic_Overview_ES.pdf" target="_blank" class="btn">📄 Descargar PDF</a></td></tr>
+                <tr><td><strong>SAMI LATAM</strong></td><td>Estudio detallado de la presencia y el impacto de SAMI.AI en América Latina.</td><td><a href="pdfs/SAMI_LATAM_ES.pdf" target="_blank" class="btn">📄 Descargar PDF</a></td></tr>
+                <tr><td><strong>SAMI Brand Strategy</strong></td><td>Planificación de la estrategia de marca para la región y sus futuras expansiones.</td><td><a href="pdfs/SAMI_Brand_Strategy_ES.pdf" target="_blank" class="btn">📄 Descargar PDF</a></td></tr>
+                <tr><td><strong>SAMI Competitive Strategy</strong></td><td>Análisis de las estrategias competitivas de SAMI.AI frente a otros actores del mercado.</td><td><a href="pdfs/SAMI_Competitive_Strategy_ES.pdf" target="_blank" class="btn">📄 Descargar PDF</a></td></tr>
+                <tr><td><strong>SAMI Journey Funnel</strong></td><td>Descripción del recorrido del cliente y cómo SAMI.AI optimiza la experiencia.</td><td><a href="pdfs/SAMI_Journey_Funnel_ES.pdf" target="_blank" class="btn">📄 Descargar PDF</a></td></tr>
+                <tr><td><strong>SAMI Brand Positioning</strong></td><td>Estrategias de posicionamiento de marca para lograr un liderazgo en el mercado.</td><td><a href="pdfs/SAMI_Brand_Positioning_ES.pdf" target="_blank" class="btn">📄 Descargar PDF</a></td></tr>
+                <tr><td><strong>SAMI Data Analysis</strong></td><td>Estudio detallado del análisis de datos a través de la inteligencia artificial.</td><td><a href="pdfs/SAMI_Data_Analysis_ES.pdf" target="_blank" class="btn">📄 Descargar PDF</a></td></tr>
+                <!-- Add the rest of your modules in Spanish -->
             </tbody>
         </table>
 
@@ -49,22 +52,14 @@
                 <tr><th>Module</th><th>Description</th><th>Action</th></tr>
             </thead>
             <tbody>
-                <tr><td><strong>SAMI Strategic Overview</strong></td><td>Executive summary of SAMI.AI's capabilities and strategic vision.</td><td><a href="pdfs/SAMI_Strategic_Overview_EN.pdf" target="_blank" class="btn btn-primary">📄 Download PDF</a></td></tr>
-                <tr><td><strong>SAMI LATAM</strong></td><td>Regional focus of SAMI.AI for businesses and markets in Latin America.</td><td><a href="pdfs/SAMI_LATAM_EN.pdf" target="_blank" class="btn btn-primary">📄 Download PDF</a></td></tr>
-                <tr><td><strong>SAMI Brand Strategy</strong></td><td>Optimizing brand strategy using conversational analysis.</td><td><a href="pdfs/SAMI_Brand_Strategy_EN.pdf" target="_blank" class="btn btn-primary">📄 Download PDF</a></td></tr>
-                <tr><td><strong>SAMI Competitive Strategy</strong></td><td>Identifying competitive advantages using customer insights.</td><td><a href="pdfs/SAMI_Competitive_Strategy_EN.pdf" target="_blank" class="btn btn-primary">📄 Download PDF</a></td></tr>
-                <tr><td><strong>SAMI Journey Funnel</strong></td><td>Visualizing each stage of the customer journey to improve conversions.</td><td><a href="pdfs/SAMI_Journey_Funnel_EN.pdf" target="_blank" class="btn btn-primary">📄 Download PDF</a></td></tr>
-                <tr><td><strong>SAMI Brand Positioning</strong></td><td>Real-time brand positioning analysis with conversational AI.</td><td><a href="pdfs/SAMI_Brand_Positioning_EN.pdf" target="_blank" class="btn btn-primary">📄 Download PDF</a></td></tr>
-                <tr><td><strong>SAMI Data Analysis</strong></td><td>Exploration and visualization of structured conversational data.</td><td><a href="pdfs/SAMI_Data_Analysis_EN.pdf" target="_blank" class="btn btn-primary">📄 Download PDF</a></td></tr>
-                <tr><td><strong>SAMI Personas</strong></td><td>Automatic generation of buyer personas from real interactions.</td><td><a href="pdfs/SAMI_Personas_EN.pdf" target="_blank" class="btn btn-primary">📄 Download PDF</a></td></tr>
-                <tr><td><strong>SAMI Jobs to be Done</strong></td><td>Identifying customer needs using the Jobs to Be Done framework.</td><td><a href="pdfs/SAMI_Jobs_to_be_Done_EN.pdf" target="_blank" class="btn btn-primary">📄 Download PDF</a></td></tr>
-                <tr><td><strong>SAMI Pain Points</strong></td><td>Detection of frictions and pain points in customer experience.</td><td><a href="pdfs/SAMI_Pain_Points_EN.pdf" target="_blank" class="btn btn-primary">📄 Download PDF</a></td></tr>
-                <tr><td><strong>SAMI Product Feedback</strong></td><td>Analyzing product feedback to accelerate improvements.</td><td><a href="pdfs/SAMI_Product_Feedback_EN.pdf" target="_blank" class="btn btn-primary">📄 Download PDF</a></td></tr>
-                <tr><td><strong>SAMI Satisfaction (NPS)</strong></td><td>Net Promoter Score calculation with enriched text analysis.</td><td><a href="pdfs/SAMI_Satisfaction_NPS_EN.pdf" target="_blank" class="btn btn-primary">📄 Download PDF</a></td></tr>
-                <tr><td><strong>SAMI Kano Model</strong></td><td>Classification of product features using the Kano Model.</td><td><a href="pdfs/SAMI_Kano_Model_EN.pdf" target="_blank" class="btn btn-primary">📄 Download PDF</a></td></tr>
-                <tr><td><strong>SAMI Product Opportunities</strong></td><td>Mapping product opportunities from the voice of the customer.</td><td><a href="pdfs/SAMI_Product_Opportunities_EN.pdf" target="_blank" class="btn btn-primary">📄 Download PDF</a></td></tr>
-                <tr><td><strong>SAMI Market Trends</strong></td><td>Identifying emerging trends using conversational intelligence.</td><td><a href="pdfs/SAMI_Market_Trends_EN.pdf" target="_blank" class="btn btn-primary">📄 Download PDF</a></td></tr>
-                <tr><td><strong>SAMI AI Co-Creation</strong></td><td>Co-creating solutions with customers using AI-guided analysis.</td><td><a href="pdfs/SAMI_AI_Co_Creation_EN.pdf" target="_blank" class="btn btn-primary">📄 Download PDF</a></td></tr>
+                <tr><td><strong>SAMI Strategic Overview</strong></td><td>Executive summary of SAMI.AI's capabilities and strategic vision.</td><td><a href="pdfs/SAMI_Strategic_Overview_EN.pdf" target="_blank" class="btn">📄 Download PDF</a></td></tr>
+                <tr><td><strong>SAMI LATAM</strong></td><td>Detailed study of SAMI.AI's presence and impact in Latin America.</td><td><a href="pdfs/SAMI_LATAM_EN.pdf" target="_blank" class="btn">📄 Download PDF</a></td></tr>
+                <tr><td><strong>SAMI Brand Strategy</strong></td><td>Brand strategy planning for the region and future expansions.</td><td><a href="pdfs/SAMI_Brand_Strategy_EN.pdf" target="_blank" class="btn">📄 Download PDF</a></td></tr>
+                <tr><td><strong>SAMI Competitive Strategy</strong></td><td>Competitive strategies of SAMI.AI in comparison to other market players.</td><td><a href="pdfs/SAMI_Competitive_Strategy_EN.pdf" target="_blank" class="btn">📄 Download PDF</a></td></tr>
+                <tr><td><strong>SAMI Journey Funnel</strong></td><td>Customer journey description and how SAMI.AI optimizes the experience.</td><td><a href="pdfs/SAMI_Journey_Funnel_EN.pdf" target="_blank" class="btn">📄 Download PDF</a></td></tr>
+                <tr><td><strong>SAMI Brand Positioning</strong></td><td>Brand positioning strategies to achieve market leadership.</td><td><a href="pdfs/SAMI_Brand_Positioning_EN.pdf" target="_blank" class="btn">📄 Download PDF</a></td></tr>
+                <tr><td><strong>SAMI Data Analysis</strong></td><td>In-depth study of data analysis through artificial intelligence.</td><td><a href="pdfs/SAMI_Data_Analysis_EN.pdf" target="_blank" class="btn">📄 Download PDF</a></td></tr>
+                <!-- Add the rest of your modules in English -->
             </tbody>
         </table>
     </div>
@@ -80,5 +75,6 @@
             }
         }
     </script>
+
 </body>
 </html>
