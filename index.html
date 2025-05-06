@@ -1,15 +1,16 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>SUITE DE SOLUCIONES SAMI AI</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(to bottom, #0a2540, #1a1a1a);
-      color: #eaeaea;
+      background: linear-gradient(to bottom, #0a2540, #1a1a2e);
+      color: #f0f0f0;
     }
     header {
       text-align: center;
@@ -27,19 +28,21 @@
       width: 100%;
       border-collapse: collapse;
       margin-top: 20px;
-      background-color: #222;
-      color: #eaeaea;
     }
     th, td {
       padding: 12px 15px;
       text-align: left;
-      border-bottom: 1px solid #444;
     }
     th {
-      background-color: #333;
+      background-color: #003366;
+      color: white;
     }
-    tr:hover {
-      background-color: #2a2a2a;
+    td {
+      background-color: #1a1a2e;
+      color: #f0f0f0;
+    }
+    tr:hover td {
+      background-color: #2a2a4d;
     }
     .button-link {
       background-color: #007acc;
@@ -52,17 +55,6 @@
     }
     .button-link:hover {
       background-color: #005b99;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #1a1a1a;
-      font-size: 0.9em;
-      color: #aaa;
-    }
-    .download-section {
-      text-align: center;
-      margin-top: 20px;
     }
     .download-button {
       background-color: #4caf50;
@@ -93,8 +85,15 @@
       color: white;
     }
     .inactive-lang {
-      background-color: #555;
+      background-color: #e1ecf4;
+      color: #007acc;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #0a2540;
       color: #ccc;
+      font-size: 0.9em;
     }
   </style>
 </head>
@@ -111,7 +110,7 @@
       <button onclick="mostrarTabla('en')" id="btn-en" class="inactive-lang">🇬🇧 English</button>
     </div>
 
-    <div class="download-section">
+    <div style="text-align:center;">
       <a href="SAMI_Portfolio_Resumen.pdf" class="download-button" target="_blank">📄 Descargar Resumen PDF</a>
     </div>
 
@@ -120,7 +119,8 @@
         <tr><th>Nombre del Módulo</th><th>Tagline</th><th>Uso Estratégico</th><th>Ir al GPT</th></tr>
       </thead>
       <tbody>
-        <tr><td>SAMI.AI COLOMBIA</td><td>GPT especializado en análisis de mercado Colombiano.</td><td>Soporta análisis por estrato, scraping, emociones y matrices regionales.</td><td><a href="https://chatgpt.com/g/g-6803ba313cc88191b6a11e9cc37f0077-sami-ai-colombia" class="button-link" target="_blank">Acceder GPT</a></td></tr>
+        <tr><td>SAMI.AI COLOMBIA</td><td>GPT especializado en análisis de mercado Colombiano.</td><td>Soporta análisis por estrato, scraping, emociones y matrices regionales.</td><td><a class="button-link" href="#" target="_blank">Acceder GPT</a></td></tr>
+        <tr><td>SAMI AI ADVANCED ANALYTICAL TOOL</td><td>Advanced AI-Powered Data Analysis Across Any Format.</td><td>Herramienta especializada para investigación de mercados y análisis de datos.</td><td><a class="button-link" href="#" target="_blank">Acceder GPT</a></td></tr>
       </tbody>
     </table>
 
@@ -129,7 +129,8 @@
         <tr><th>Module Name</th><th>Tagline</th><th>Strategic Use</th><th>Go to GPT</th></tr>
       </thead>
       <tbody>
-        <tr><td>SAMI AI COLOMBIA</td><td>GPT specialized in Colombian market analysis.</td><td>Supports analysis by strata, scraping, emotions, and regional matrices.</td><td><a href="https://chatgpt.com/g/g-6803ba313cc88191b6a11e9cc37f0077-sami-ai-colombia" class="button-link" target="_blank">Go to GPT</a></td></tr>
+        <tr><td>SAMI.AI COLOMBIA</td><td>GPT specialized in Colombian market analysis.</td><td>Supports analysis by strata, scraping, emotions, and regional matrices.</td><td><a class="button-link" href="#" target="_blank">Go to GPT</a></td></tr>
+        <tr><td>SAMI AI ADVANCED ANALYTICAL TOOL</td><td>Advanced AI-Powered Data Analysis Across Any Format.</td><td>Specialized tool for in-depth market research and data analysis.</td><td><a class="button-link" href="#" target="_blank">Go to GPT</a></td></tr>
       </tbody>
     </table>
   </main>
@@ -144,19 +145,20 @@
       const tablaEn = document.getElementById('tabla-en');
       const btnEs = document.getElementById('btn-es');
       const btnEn = document.getElementById('btn-en');
+
       if (idioma === 'es') {
         tablaEs.style.display = 'table';
         tablaEn.style.display = 'none';
         btnEs.classList.add('active-lang');
-        btnEs.classList.remove('inactive-lang');
         btnEn.classList.remove('active-lang');
+        btnEs.classList.remove('inactive-lang');
         btnEn.classList.add('inactive-lang');
       } else {
         tablaEs.style.display = 'none';
         tablaEn.style.display = 'table';
         btnEn.classList.add('active-lang');
-        btnEn.classList.remove('inactive-lang');
         btnEs.classList.remove('active-lang');
+        btnEn.classList.remove('inactive-lang');
         btnEs.classList.add('inactive-lang');
       }
     }
