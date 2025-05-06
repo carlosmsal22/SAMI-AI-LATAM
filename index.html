@@ -4,14 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <title>SUITE DE SOLUCIONES SAMI AI</title>
-  <link rel="stylesheet" href="style.css">
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(to bottom, #102840, #f0f4f8);
-      color: #222;
+      background: linear-gradient(to bottom, #0a2540, #1c2b3a);
+      color: #f0f4f8;
     }
     header {
       text-align: center;
@@ -30,17 +29,21 @@
       border-collapse: collapse;
       margin-top: 20px;
     }
+    th {
+      background-color: #1e3a5f;
+      color: #ffffff;
+    }
+    td {
+      background-color: #273d56;
+      color: #e0eaf3;
+    }
+    tr:hover td {
+      background-color: #35506b;
+    }
     th, td {
       padding: 12px 15px;
       text-align: left;
-      border-bottom: 1px solid #ccc;
-    }
-    th {
-      background-color: #d7e9f4;
-      color: #0a2540;
-    }
-    tr:hover {
-      background-color: #eef6fb;
+      border-bottom: 1px solid #444;
     }
     .button-link {
       background-color: #007acc;
@@ -57,7 +60,8 @@
     footer {
       text-align: center;
       padding: 20px;
-      background-color: #f1f1f1;
+      background-color: #0a2540;
+      color: #ccc;
       font-size: 0.9em;
     }
     .download-section {
@@ -93,8 +97,8 @@
       color: white;
     }
     .inactive-lang {
-      background-color: #e1ecf4;
-      color: #007acc;
+      background-color: #445a70;
+      color: #f0f4f8;
     }
   </style>
 </head>
@@ -117,12 +121,7 @@
 
     <table id="tabla-es">
       <thead>
-        <tr>
-          <th>Nombre del Módulo</th>
-          <th>Tagline</th>
-          <th>Uso Estratégico</th>
-          <th>Ir al GPT</th>
-        </tr>
+        <tr><th>Nombre del Módulo</th><th>Tagline</th><th>Uso Estratégico</th><th>Ir al GPT</th></tr>
       </thead>
       <tbody>
         <tr><td>SAMI.AI COLOMBIA</td><td>GPT especializado en análisis de mercado Colombiano.</td><td>Soporta análisis por estrato, scraping, emociones y matrices regionales.</td><td><a href="https://chatgpt.com/g/g-6803ba313cc88191b6a11e9cc37f0077-sami-ai-colombia" class="button-link" target="_blank">Acceder GPT</a></td></tr>
@@ -148,12 +147,7 @@
 
     <table id="tabla-en" style="display: none;">
       <thead>
-        <tr>
-          <th>Module Name</th>
-          <th>Tagline</th>
-          <th>Strategic Use</th>
-          <th>Go to GPT</th>
-        </tr>
+        <tr><th>Module Name</th><th>Tagline</th><th>Strategic Use</th><th>Go to GPT</th></tr>
       </thead>
       <tbody>
 <tr><td>SAMI AI COLOMBIA</td><td>GPT specialized in Colombian market analysis.</td><td>Supports analysis by strata, scraping, emotions, and regional matrices.</td><td><a href="https://chatgpt.com/g/g-6803ba313cc88191b6a11e9cc37f0077-sami-ai-colombia" class="button-link" target="_blank">Go to GPT</a></td></tr>
